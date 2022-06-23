@@ -1,0 +1,48 @@
+@import "./variables";
+@import "./reset";
+.container {
+  width: 200px;
+  margin: 10px auto;
+}
+.screen {
+  background-color: $white-color;
+  width: 100%;
+  height: 55px;
+  position: relative;
+  .input {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    font-size: 4rem;
+    color: $input-color;
+    z-index: 1;
+  }
+}
+.keyboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 100%;
+}
+.item {
+  height: 50px;
+  outline: none;
+  border: 0.1px solid $back-212;
+  &:hover {
+    background-color: $back-182;
+    cursor: pointer;
+  }
+}
+
+.all-del {
+  grid-column: 1 / span 2;
+  background-color: $pink-color;
+  &:hover {
+    background-color: $back-ac-hover;
+  }
+}
+.del {
+  background-color: $back-del;
+  &:hover {
+    background-color: $back-del-hover;
+  }
+}
